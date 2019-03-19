@@ -1,7 +1,7 @@
 
 public class ContaCorrente extends Conta{
-	int LimCheque;
-	boolean status;
+	protected int LimCheque;
+	protected boolean status;
 	
 	//Apaguei todos os metodes de mostrar Saldo, Número porque  não é aqui, e adicionei elas na entrada do construtor da super classe.
 	public ContaCorrente(int,numero, float saldo,int limiteSaque, int LimCheque, boolean status) {
