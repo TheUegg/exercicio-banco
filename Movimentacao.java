@@ -1,39 +1,25 @@
 
 public class Movimentacao {
+	int numeroConta;
+	String movimento;
+	float  valor;
 	
-	String descricao;
-	int valor;
-	int movimento;
-	
-	public Movimentacao(String descricao, int valor, int movimento) {
-		this.descricao = descricao;
+	public Movimentacao(int numeroConta, int valor, String movimento) {
+		this.numeroConta = numeroConta;
 		this.valor = valor;
 		this.movimento = movimento;
 	}
 
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public int getnumeroConta() {
+		return numeroConta;
 	}
 
 	public int getValor() {
 		return valor;
 	}
 
-	public void setValor(int valor) {
-		this.valor = valor;
-	}
-
-	public int getMovimento() {
+	public String getMovimento() {
 		return movimento;
 	}
-
-	public void setMovimento(int movimento) {
-		this.movimento = movimento;
-	}
-	
 	
 }
