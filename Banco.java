@@ -1,65 +1,46 @@
-import java.util.Scanner;
 public class Banco {
 
-	public static void main(String[] args) {
-		int i = 1;
-		int parada = 0;
-		
-		Scanner read = new Scanner(System.in);
-		
-		while(parada == 0) {
+	private Conta[] conta;
+	private int PosAtual = 0;
 	
-			Conta [] arrayConta = new Conta[i];
-			System.out.println("-------Menu-------");
-			System.out.println("1-Criação de conta");
-			System.out.println("2-Exclusão de conta");
-			System.out.println("3-Saque na conta");
-			System.out.println("4-Depósito na conta");
-			System.out.println("5-Emissão de Saldo e Extrato");
-			System.out.println("6-Transferência entre contas");
-			System.out.println("7-Shutdown");
-			int menu = read.nextInt();
-		
-			switch(menu) {
-				case 1:
-					System.out.println("Qual o limite de saque das contas?");
-					int limiteSaque = read.nextInt();
-					
-					System.out.println("Deseja Criar uma Conta Poupanca ou Corrente?");
-					String escolha = read.next();
-					if(escolha == "Poupanca") {
-						System.out.println("");
-					}
-					else {
-						
-					}
-					i++;
-					break;
-				case 2:
-					System.out.println("Qual o numero da conta que deseja excluir?");
-					int nConta = read.nextInt();
-					nConta--;
-					
-					break;
-				case 3:
-					
-					break;
-				case 4:
-					
-					break;
-				case 5:
-					
-					break;
-				case 6:
-					
-					break;
-				case 7:
-					parada = 1;
-					break;
+	 public Banco(){
+        this.conta = new Conta[20];
+    }
+	//Na entrada do método, coloquei todo tipo de variavel pra preencher caso for uma contaPoupança ou contaCorrente.
+	//No primeiro "for" ele verifica se ja não tem uma conta com o mesmo número.
+	//Caso não tenha, ele cria uma variável do tipo conta, vai no tipo de conta desejada, e cria a conta com os dados e ja joga na posição vazia do array de conta.
+	
+	public void CriarConta( int tipo, int limiteSaque, int numero,float saldo, int LimCheq, boolean status, float variacao, float rendimentoMensal){
+		for(int i= 0 ; i< this.conta.length; i++){
+			if( numero == conta[i];){
+				return " Já existe Conta com este número";
+			} else if{
+				Conta contaNova;
+				if(tipo == 1){
+                                        contaNova= new ContaCorrente(numero,saldo,limiteSaque, LimCheque, status);
+                                        conta[this.posAtual]= contaNova;
+                                        this.posAtual++;
+                                }else if (tipo == 2){
+                                        contaNova = new ContaPoupanca(numero, saldo,limiteSaque, variacao, rendimentoMensal);
+                                        conta[this.posAtual] = contaNova;
+                                        this.posAtual++;
+				}
 			}
-			
+        
 		}
-		
 	}
-
+	
+	//Apenas encontra no array de Contas o numero da conta e apaga ela.
+	public void apagarConta(int numero){
+        for(int x = 0; x<conta.length ; x++ ){
+            if(numero  == conta.NumConta){
+                conta[x] = null;
+            }
+        }
+    }
+	
+	
+	
+	
+			
 }
