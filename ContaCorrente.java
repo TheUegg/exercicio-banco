@@ -1,30 +1,13 @@
 
 public class ContaCorrente extends Conta{
-	int numero;
-	int saldo;
+	int LimCheque;
 	boolean status;
 	
-	public ContaCorrente(int limiteSaque, int numero, int saldo, boolean status) {
-		super(limiteSaque);
-		this.numero = numero;
-		this.saldo = saldo;
+	//Apaguei todos os metodes de mostrar Saldo, Número porque  não é aqui, e adicionei elas na entrada do construtor da super classe.
+	public ContaCorrente(int,numero, float saldo,int limiteSaque, int LimCheque, boolean status) {
+		super(numero, saldo, limiteSaque);
+		this.LimCheque = LimCheque;
 		this.status = status;
-	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
-	public int getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(int saldo) {
-		this.saldo = saldo;
 	}
 
 	public boolean isStatus() {
