@@ -3,8 +3,8 @@ public class ContaPoupanca extends Conta {
 	int variacao;
 	int rendimentoMensal;
 	
-	public ContaPoupanca(int limiteSaldo, int variacao, int rendimentoMensal) {
-		super(limiteSaldo);
+	public ContaPoupanca(int limiteSque,int numero, int saldo, int variacao, int rendimentoMensal) {
+		super(limiteSaque, numero, saldo);
 		this.variacao = variacao;
 		this.rendimentoMensal = rendimentoMensal;
 	}
